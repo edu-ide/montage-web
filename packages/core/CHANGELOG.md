@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/wanteddev/montage-web/compare/v4.0.2...v4.0.3) (2026-10-12)
+
+### Bug Fixes
+
+- **core:** modal action area extra content 하단 간격 중복 제거 ([#674](https://github.com/wanteddev/montage-web/issues/674)) ([d7c5394](https://github.com/wanteddev/montage-web/commit/d7c539440769509d3678897cc405dc6ef5d19751))
+- **core:** 오버레이가 닫힐 때 포커스가 열기 전 요소로 돌아가지 않는 문제 수정 ([#671](https://github.com/wanteddev/montage-web/issues/671)) ([c85ceb5](https://github.com/wanteddev/montage-web/commit/c85ceb57feed3faa86ed9d36c8b68bb39b8ef95e))
+- **core:** 중첩 오버레이를 동시에 닫으면 body pointer-events가 남는 문제 수정 ([#672](https://github.com/wanteddev/montage-web/issues/672)) ([075a8fd](https://github.com/wanteddev/montage-web/commit/075a8fd6e5f0229597b7cd62fdf68f5a801fc68a))
+
 ## [4.0.2](https://github.com/wanteddev/montage-web/compare/v4.0.1...v4.0.2) (2026-10-10)
 
 ### Bug Fixes
