@@ -111,6 +111,8 @@ const modalContainerWrapperVariant = (
         align-items: initial;
         padding: 0px;
 
+        --action-area-bottom-offset: 0px;
+
         [data-role='modal-dimmer'][data-status='close'] {
           opacity: initial;
           pointer-events: none;
@@ -123,6 +125,8 @@ const modalContainerWrapperVariant = (
         justify-content: center;
         padding: 20px;
 
+        --action-area-bottom-offset: 4px;
+
         [data-role='modal-dimmer'][data-status='close'] {
           opacity: initial;
           pointer-events: none;
@@ -134,6 +138,8 @@ const modalContainerWrapperVariant = (
         padding: 0px;
         align-items: flex-end;
         justify-content: center;
+
+        --action-area-bottom-offset: 0px;
 
         [data-role='modal-dimmer'][data-status='close'] {
           opacity: 0;

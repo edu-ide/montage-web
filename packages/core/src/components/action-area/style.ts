@@ -9,7 +9,11 @@ export const actionAreaStyle =
   ({ divider, background, extra, backgroundColor }: ActionAreaProps) =>
   (theme: Theme) => css`
     width: 100%;
-    padding: var(--action-area-margin-y, 20px) var(--action-area-margin-x, 20px);
+    padding: var(--action-area-margin-y, 20px) var(--action-area-margin-x, 20px)
+      calc(
+        var(--action-area-margin-y, 20px) +
+          var(--action-area-bottom-offset, 0px)
+      );
     position: relative;
 
     --action-area-background-color: ${getColorByToken(theme, backgroundColor!)};
