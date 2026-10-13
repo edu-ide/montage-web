@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/wanteddev/montage-web/compare/v4.0.3...v4.1.0) (2026-10-13)
+
+### Bug Fixes
+
+- **core:** form control와 함께 쓴 picker에서 reset 아이콘이 사라지지 않는 문제 수정 ([#675](https://github.com/wanteddev/montage-web/issues/675)) ([3f39861](https://github.com/wanteddev/montage-web/commit/3f39861ca50af4ab6a60876f9558a489486f0224))
+
+### Features
+
+- **core,icon:** icon figma sync and new code connect publish ([#677](https://github.com/wanteddev/montage-web/issues/677)) ([bacc51f](https://github.com/wanteddev/montage-web/commit/bacc51fd980b3735b02feff91652389c38cacfef))
+
 ## [4.0.3](https://github.com/wanteddev/montage-web/compare/v4.0.2...v4.0.3) (2026-10-12)
 
 ### Bug Fixes
