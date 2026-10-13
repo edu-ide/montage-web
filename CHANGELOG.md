@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.1](https://github.com/wanteddev/montage-web/compare/v4.1.0...v4.1.1) (2026-10-13)
+
+### Bug Fixes
+
+- **core:** flex stretch 환경에서 button 높이가 늘어나는 문제 수정 ([#679](https://github.com/wanteddev/montage-web/issues/679)) ([910ba65](https://github.com/wanteddev/montage-web/commit/910ba65963acbed1c4b23c7925bf09129e4df640))
+
 # [4.1.0](https://github.com/wanteddev/montage-web/compare/v4.0.3...v4.1.0) (2026-10-13)
 
 ### Bug Fixes
