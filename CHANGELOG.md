@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.2](https://github.com/wanteddev/montage-web/compare/v4.1.1...v4.1.2) (2026-10-13)
+
+### Bug Fixes
+
+- **core:** modal popup variant에서 action area 하단 여백 4px 추가 ([#680](https://github.com/wanteddev/montage-web/issues/680)) ([1783dfb](https://github.com/wanteddev/montage-web/commit/1783dfb2bba7c74cc2c585bcec703484f2053f67))
+
 ## [4.1.1](https://github.com/wanteddev/montage-web/compare/v4.1.0...v4.1.1) (2026-10-13)
 
 ### Bug Fixes
