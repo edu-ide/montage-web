@@ -85,3 +85,4 @@ export * from './ohaeng-balance';
 export * from './pillar-chart';
 export * from './score-ring';
 export * from './speech-bubble';
+export * from './insight-card';

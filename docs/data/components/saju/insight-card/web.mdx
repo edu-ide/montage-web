@@ -1,0 +1,30 @@
+---
+title: Insight Card
+description: 글로 된 풀이를 키워드·비교·흐름·체크리스트 중 한 장의 그림으로 요약합니다.
+createdAt: 2026-10-21
+---
+
+## Basic
+
+캐릭터의 답에 늘 그림 한 장을 붙이기 위한 부품입니다. 모델은 `content` 만 고르고(그림 주문서), 그리는 일은 이 부품이 합니다. 점수를 담는 칸은 없습니다 — 점수는 엔진 값을 그리는 `ScoreRing`·`FortuneFlow` 의 몫입니다.
+
+<Demo code={`import { FlexBox, InsightCard } from '@montage-ui/core';
+
+const Demo = () => (
+  <FlexBox gap="12px" flexDirection="column">
+    <InsightCard title="성향 키워드" content={{ kind: 'keywords', items: [{ label: '단단함', detail: '금 기운이 셉니다' }, { label: '추진력', detail: '신강한 일간' }, { label: '유연함 필요', detail: '목이 비어 있음' }] }} />
+    <InsightCard title="강점과 주의" content={{ kind: 'compare', left: { label: '강점', points: ['결단이 빠름', '책임감'] }, right: { label: '주의', points: ['고집', '휴식 부족'] } }} />
+    <InsightCard title="이번 달 좋은 날" content={{ kind: 'timeline', items: [{ when: '10월 22일', text: '제안에 응하기', tone: 'good' }, { when: '10월 25일', text: '무리한 일정 피하기', tone: 'caution' }] }} />
+    <InsightCard title="오늘 해 볼 일" content={{ kind: 'checklist', items: ['관심 분야 자격증 알아보기', '이동은 여유 있게'] }} />
+  </FlexBox>
+);
+
+export default Demo;`}
+/>
+
+## Props
+
+| 이름 | 타입 | 설명 |
+|:---|:---|:---|
+| title | `string` | 카드 제목(명조). |
+| content | `InsightContent` | `keywords` · `compare` · `timeline` · `checklist` 중 하나. |

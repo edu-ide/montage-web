@@ -58,6 +58,7 @@ CSS 변수 이름은 원본 규칙을 따른다. 예: `--semantic-ohaeng-wood-pr
 | `FortuneFlow` | 날·달·해·대운 점수 흐름과 지금 위치 | `.../fortune-flow` |
 | `CompatibilityMeter` | 두 사람의 일간과 궁합 점수 | `.../compatibility-meter` |
 | `SpeechBubble` | 캐릭터의 말(`--font-voice`) | `.../speech-bubble` |
+| `InsightCard` | 글 풀이를 한 장의 그림으로(키워드·비교·흐름·체크리스트). 점수 칸 없음 | `.../insight-card` |
 
 모든 부품은 원본 관례(`Box` + `sx`, `index/types/style` 파일, 단위 테스트)를 따른다. 그 밖의 버튼·입력·모달·탭 등은 원본 Montage 부품을 그대로 쓰며, 토큰을 통해 자동으로 사주 색을 입는다.
 
