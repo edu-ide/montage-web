@@ -74,7 +74,7 @@ const Body = ({ content }: { content: InsightContent }) => {
 const InsightCard = forwardRef<
   HTMLElement,
   DefaultComponentPropsInternal<InsightCardProps, 'section'>
->(({ title, content, ...props }, ref) => (
+>(({ eyebrow, title, content, ...props }, ref) => (
   <Box
     as="section"
     ref={ref}
@@ -83,7 +83,10 @@ const InsightCard = forwardRef<
     {...props}
     sx={[insightCardStyle, props.sx]}
   >
-    <h3 data-role="insight-title">{title}</h3>
+    <header>
+      {eyebrow && <span data-role="insight-eyebrow">{eyebrow}</span>}
+      <h3 data-role="insight-title">{title}</h3>
+    </header>
     <Body content={content} />
   </Box>
 ));

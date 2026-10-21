@@ -47,6 +47,12 @@ CSS 변수 이름은 원본 규칙을 따른다. 예: `--semantic-ohaeng-wood-pr
 
 글꼴 파일은 포함하지 않는다. 앱이 Pretendard, 고운바탕(Gowun Batang), Noto Serif KR 을 불러온다.
 
+## 편집 규칙
+
+- **눈썹 라벨:** 카드 제목 위에 한자·한글 짝(예: `命式 · 명식`, `日辰 · 오늘`)을 단청색 작은 글자로 단다. 무엇을 보는 카드인지 한눈에 갈린다.
+- **도장은 화면당 하나:** 브랜드 표시나 대표 행동 하나에만 쓴다.
+- **상자보다 여백:** 카드는 얇은 선 하나로 두르고, 카드 사이 간격을 넉넉히 둔다.
+
 ## 사주 부품
 
 | 부품 | 하는 일 | 문서 |
@@ -58,7 +64,8 @@ CSS 변수 이름은 원본 규칙을 따른다. 예: `--semantic-ohaeng-wood-pr
 | `FortuneFlow` | 날·달·해·대운 점수 흐름과 지금 위치 | `.../fortune-flow` |
 | `CompatibilityMeter` | 두 사람의 일간과 궁합 점수 | `.../compatibility-meter` |
 | `SpeechBubble` | 캐릭터의 말(`--font-voice`) | `.../speech-bubble` |
-| `InsightCard` | 글 풀이를 한 장의 그림으로(키워드·비교·흐름·체크리스트). 점수 칸 없음 | `.../insight-card` |
+| `InsightCard` | 글 풀이를 한 장의 그림으로(키워드·비교·흐름·체크리스트). 점수 칸 없음, 눈썹 라벨(`eyebrow`) | `.../insight-card` |
+| `SealBadge` | 단청 도장. 브랜드 표시·대표 행동 옆에 화면당 하나 | `.../seal-badge` |
 
 모든 부품은 원본 관례(`Box` + `sx`, `index/types/style` 파일, 단위 테스트)를 따른다. 그 밖의 버튼·입력·모달·탭 등은 원본 Montage 부품을 그대로 쓰며, 토큰을 통해 자동으로 사주 색을 입는다.
 

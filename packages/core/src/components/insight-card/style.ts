@@ -13,6 +13,14 @@ export const insightCardStyle = (theme: Theme) => css`
   border: 1px solid ${theme.semantic.line.neutral.primary};
   background-color: ${theme.semantic.surface.neutral.primary};
 
+  [data-role='insight-eyebrow'] {
+    display: block;
+    margin-bottom: 2px;
+    ${typographyStyle('caption1', 'bold')}
+    letter-spacing: 0.12em;
+    color: ${theme.semantic.foreground.negative.primary};
+  }
+
   [data-role='insight-title'] {
     margin: 0;
     font-family: var(--font-serif);

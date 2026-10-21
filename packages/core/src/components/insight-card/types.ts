@@ -17,6 +17,8 @@ export type InsightContent =
   | { kind: 'checklist'; items: Array<string> };
 
 export type InsightCardProps = WithSxProps<{
+  /** Small label above the title (e.g. 性向 · 성향). */
+  eyebrow?: string;
   /** The card title. */
   title: string;
   /** What to draw. */

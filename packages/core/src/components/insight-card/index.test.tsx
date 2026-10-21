@@ -73,3 +73,21 @@ describe('InsightCard', () => {
     );
   });
 });
+
+describe('InsightCard eyebrow', () => {
+  afterEach(cleanup);
+
+  it('shows the eyebrow above the title', () => {
+    render(
+      <InsightCard
+        eyebrow="性向 · 성향"
+        title="성향 키워드"
+        content={{ kind: 'checklist', items: ['하나', '둘'] }}
+      />,
+    );
+    expect(screen.getByText('性向 · 성향')).toHaveAttribute(
+      'data-role',
+      'insight-eyebrow',
+    );
+  });
+});
