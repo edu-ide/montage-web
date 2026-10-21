@@ -1,0 +1,33 @@
+---
+title: Compatibility Meter
+description: 두 사람의 일간과 궁합 점수를 마주 보게 놓습니다.
+createdAt: 2026-10-21
+---
+
+## Basic
+
+가운데 점수 원과 관계(상생·상극·비화)를 두고, 양쪽에 두 사람의 일간 글자를 큰 크기로 둡니다.
+
+<Demo code={`import { CompatibilityMeter } from '@montage-ui/core';
+
+const Demo = () => (
+  <CompatibilityMeter
+    people={[
+      { name: '민지', dayMaster: { hanja: '甲', reading: '갑', ohaeng: 'wood' } },
+      { name: '준호', dayMaster: { hanja: '丙', reading: '병', ohaeng: 'fire' } },
+    ]}
+    score={82}
+    relation="상생"
+  />
+);
+
+export default Demo;`}
+/>
+
+## Props
+
+| 이름 | 타입 | 설명 |
+|:---|:---|:---|
+| people | `[CompatibilityPerson, CompatibilityPerson]` | 정확히 두 사람. |
+| score | `number` | 0..100. |
+| relation | `string` | 두 일간의 관계. |

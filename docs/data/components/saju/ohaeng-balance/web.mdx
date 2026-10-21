@@ -1,0 +1,24 @@
+---
+title: Ohaeng Balance
+description: 목·화·토·금·수의 개수를 같은 축의 막대로 비교합니다.
+createdAt: 2026-10-21
+---
+
+## Basic
+
+순서는 항상 목화토금수입니다. 0 은 숫자 대신 `emptyLabel`(기본 '없음')을 단청색으로 보여 줘서, 없는 오행이 눈에 띄게 합니다.
+
+<Demo code={`import { OhaengBalance } from '@montage-ui/core';
+
+const Demo = () => <OhaengBalance values={{ wood: 0, fire: 2, earth: 2, metal: 3, water: 1 }} />;
+
+export default Demo;`}
+/>
+
+## Props
+
+| 이름 | 타입 | 설명 |
+|:---|:---|:---|
+| values | `Partial<Record<Ohaeng, number>>` | 오행별 값. 빠진 오행은 0. |
+| emptyLabel | `string` | 0 대신 보일 글. 기본 '없음'. |
+| formatValue | `(value: number) => string` | 0 이 아닌 값의 표기. |

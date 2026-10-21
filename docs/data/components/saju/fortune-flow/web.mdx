@@ -1,0 +1,29 @@
+---
+title: Fortune Flow
+description: 날·달·해·대운의 점수 흐름을 한 줄로 보여 주고 지금 위치를 표시합니다.
+createdAt: 2026-10-21
+---
+
+## Basic
+
+라벨은 처음·끝·강조 지점만 보입니다. 모든 값은 SVG `title` 로 읽힙니다.
+
+<Demo code={`import { FortuneFlow } from '@montage-ui/core';
+
+const points = Array.from({ length: 31 }, (_, i) => ({ label: (i + 1) + '일', value: 50 + Math.round(25 * Math.sin(i / 3)) }));
+
+const Demo = () => <FortuneFlow points={points} highlightIndex={20} baseline={50} area aria-label="10월 날짜별 종합 점수" />;
+
+export default Demo;`}
+/>
+
+## Props
+
+| 이름 | 타입 | 설명 |
+|:---|:---|:---|
+| points | `Array<{ label: string; value: number }>` | 차례대로의 점. |
+| highlightIndex | `number` | 표시할 지점(오늘, 지금 대운). |
+| min / max | `number` | 세로축 범위. 기본 0..100. |
+| baseline | `number` | 점선 기준선. |
+| area | `boolean` | 선 아래를 옅게 칠합니다. |
+| aria-label | `string` | 필수. |

@@ -275,10 +275,7 @@ const iconButtonColorStyle = (
         ${!alternative &&
         css`
           @supports (-webkit-backdrop-filter: none) {
-            color: ${addOpacity(
-              theme.atomic.ink[50],
-              theme.opacity[61],
-            )};
+            color: ${addOpacity(theme.atomic.ink[50], theme.opacity[61])};
           }
         `}
 

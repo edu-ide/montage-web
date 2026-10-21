@@ -1,0 +1,31 @@
+---
+title: Pillar Chart
+description: 사주 원국의 네 기둥을 천간 위, 지지 아래로 나란히 보여 줍니다.
+createdAt: 2026-10-21
+---
+
+## Basic
+
+전통 순서(시·일·월·연)로 넘기고, 본인을 뜻하는 일주에 `highlighted` 를 줍니다. 십성은 글자 위아래, 12운성은 `caption` 으로 붙입니다.
+
+<Demo code={`import { PillarChart } from '@montage-ui/core';
+
+const pillars = [
+  { key: 'hour', label: '시주', stem: { hanja: '癸', reading: '계', ohaeng: 'water', tenGod: '상관' }, branch: { hanja: '未', reading: '미', ohaeng: 'earth', tenGod: '정인' }, caption: '관대' },
+  { key: 'day', label: '일주', stem: { hanja: '庚', reading: '경', ohaeng: 'metal', tenGod: '일간' }, branch: { hanja: '辰', reading: '진', ohaeng: 'earth', tenGod: '편인' }, caption: '양', highlighted: true },
+  { key: 'month', label: '월주', stem: { hanja: '辛', reading: '신', ohaeng: 'metal', tenGod: '겁재' }, branch: { hanja: '巳', reading: '사', ohaeng: 'fire', tenGod: '편관' }, caption: '장생' },
+  { key: 'year', label: '연주', stem: { hanja: '庚', reading: '경', ohaeng: 'metal', tenGod: '비견' }, branch: { hanja: '午', reading: '오', ohaeng: 'fire', tenGod: '정관' }, caption: '목욕' },
+];
+
+const Demo = () => <PillarChart pillars={pillars} />;
+
+export default Demo;`}
+/>
+
+## Props
+
+| 이름 | 타입 | 설명 |
+|:---|:---|:---|
+| pillars | `Array<Pillar>` | 표시 순서대로의 기둥. |
+| size | `'small' | 'medium' | 'large'` | 글자 크기. 기본 medium. |
+| aria-label | `string` | 기본 '사주 원국'. |

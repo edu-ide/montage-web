@@ -1,0 +1,28 @@
+---
+title: Speech Bubble
+description: 캐릭터가 하는 짧은 말을 명조로 적습니다.
+createdAt: 2026-10-21
+---
+
+## Basic
+
+꼬리는 위(캐릭터 아래에 둘 때)·아래·없음 중에서 고릅니다. 한 줄 40자 안쪽으로 씁니다.
+
+<Demo code={`import { FlexBox, SpeechBubble } from '@montage-ui/core';
+
+const Demo = () => (
+  <FlexBox gap="16px" flexDirection="column" alignItems="center">
+    <SpeechBubble>어디 한번 볼까요? 기운을 살펴볼게요</SpeechBubble>
+    <SpeechBubble tone="brand" tail="bottom">오늘은 공부하기 좋은 날이에요</SpeechBubble>
+  </FlexBox>
+);
+
+export default Demo;`}
+/>
+
+## Props
+
+| 이름 | 타입 | 설명 |
+|:---|:---|:---|
+| tail | `'top' | 'bottom' | 'none'` | 꼬리 방향. 기본 top. |
+| tone | `'paper' | 'brand'` | 기본 paper. |

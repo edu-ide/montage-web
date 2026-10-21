@@ -1,0 +1,32 @@
+---
+title: Score Ring
+description: 점수 하나를 원 둘레로 보여 줍니다.
+createdAt: 2026-10-21
+---
+
+## Basic
+
+`tone="auto"` 는 65% 이상 positive, 45% 이상 cautionary, 그 밑은 negative 입니다. 범위를 벗어난 값은 0..max 로 자릅니다.
+
+<Demo code={`import { FlexBox, ScoreRing } from '@montage-ui/core';
+
+const Demo = () => (
+  <FlexBox gap="16px">
+    <ScoreRing value={78} label="종합" />
+    <ScoreRing value={52} label="재물" size="small" />
+    <ScoreRing value={31} label="건강" size="small" />
+  </FlexBox>
+);
+
+export default Demo;`}
+/>
+
+## Props
+
+| 이름 | 타입 | 설명 |
+|:---|:---|:---|
+| value | `number` | 점수. |
+| max | `number` | 최댓값. 기본 100. |
+| label | `string` | 숫자 아래 글. 접근성 이름. |
+| size | `'small' | 'medium' | 'large'` | 64·96·128px. |
+| tone | `'auto' | 'positive' | 'cautionary' | 'negative' | 'brand'` | 기본 auto. |

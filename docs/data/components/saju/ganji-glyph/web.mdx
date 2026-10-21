@@ -1,0 +1,51 @@
+---
+title: Ganji Glyph
+description: 천간·지지 한 글자를 오행 색으로 보여 줍니다.
+createdAt: 2026-10-21
+---
+
+## Basic
+
+명식·궁합·일진 어디서나 간지 한 글자는 이 부품으로 씁니다. 글자는 명조(`var(--font-serif)`), 읽는 소리는 오른쪽 아래에 작게 붙습니다.
+
+<Demo code={`import { FlexBox, GanjiGlyph } from '@montage-ui/core';
+
+const Demo = () => (
+  <FlexBox gap="8px">
+    <GanjiGlyph hanja="甲" reading="갑" ohaeng="wood" />
+    <GanjiGlyph hanja="丙" reading="병" ohaeng="fire" />
+    <GanjiGlyph hanja="戊" reading="무" ohaeng="earth" />
+    <GanjiGlyph hanja="庚" reading="경" ohaeng="metal" />
+    <GanjiGlyph hanja="壬" reading="임" ohaeng="water" />
+  </FlexBox>
+);
+
+export default Demo;`}
+/>
+
+## Size and variant
+
+`size` 는 small(40)·medium(56)·large(72), `variant` 는 soft(옅은 면)·solid(채움)입니다. solid 는 한 화면에 강조할 글자 하나에만 씁니다.
+
+<Demo code={`import { FlexBox, GanjiGlyph } from '@montage-ui/core';
+
+const Demo = () => (
+  <FlexBox gap="8px" alignItems="flex-end">
+    <GanjiGlyph hanja="庚" reading="경" ohaeng="metal" size="small" />
+    <GanjiGlyph hanja="庚" reading="경" ohaeng="metal" size="medium" />
+    <GanjiGlyph hanja="庚" reading="경" ohaeng="metal" size="large" variant="solid" />
+  </FlexBox>
+);
+
+export default Demo;`}
+/>
+
+## Props
+
+| 이름 | 타입 | 설명 |
+|:---|:---|:---|
+| hanja | `string` | 글자(한자). |
+| reading | `string` | 읽는 소리. 접근성 이름에도 쓰입니다. |
+| ohaeng | `'wood' | 'fire' | 'earth' | 'metal' | 'water'` | 오행. 색을 정합니다. |
+| size | `'small' | 'medium' | 'large'` | 기본 medium. |
+| variant | `'soft' | 'solid'` | 기본 soft. |
