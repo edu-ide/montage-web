@@ -8,18 +8,23 @@ import type { SpeechBubbleProps } from './types';
 
 /** 캐릭터가 하는 짧은 말. 대화 답과 같은 --font-voice 로 적어 한 목소리를 낸다. */
 const SpeechBubble = forwardRef<
-  HTMLParagraphElement,
-  DefaultComponentPropsInternal<SpeechBubbleProps, 'p'>
->(({ tail = 'top', tone = 'paper', children, ...props }, ref) => (
-  <Box
-    as="p"
-    ref={ref}
-    {...props}
-    sx={[speechBubbleStyle({ tail, tone }), props.sx]}
-  >
-    {children}
-  </Box>
-));
+  HTMLDivElement,
+  DefaultComponentPropsInternal<SpeechBubbleProps, 'div'>
+>(
+  (
+    { tail = 'top', tone = 'paper', length = 'line', children, ...props },
+    ref,
+  ) => (
+    <Box
+      as="div"
+      ref={ref}
+      {...props}
+      sx={[speechBubbleStyle({ tail, tone, length }), props.sx]}
+    >
+      {children}
+    </Box>
+  ),
+);
 
 SpeechBubble.displayName = 'SpeechBubble';
 
