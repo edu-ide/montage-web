@@ -142,7 +142,12 @@ body {
 }
 
 :root {
-  /* 사주 테마: 본문은 Pretendard, 간지·제목·말풍선은 명조(var(--font-serif)) */
+  /*
+   * 사주 테마 글꼴 역할
+   * --font-sans  : UI(버튼·입력·라벨·사용자 글)
+   * --font-voice : 캐릭터의 말(말풍선·대화 답). 긴 글을 읽는 본문용 명조
+   * --font-serif : 사주 상징(간지 한자·카드 제목·점수 숫자)
+   */
   --font-sans: 'Pretendard Variable',
     'Pretendard JP Variable',
     Pretendard,
@@ -160,6 +165,13 @@ body {
     'Segoe UI Emoji',
     'Segoe UI Symbol',
     sans-serif;
+  --font-voice:
+    'Gowun Batang',
+    'Noto Serif KR',
+    'Nanum Myeongjo',
+    AppleMyungjo,
+    'Batang',
+    serif;
   --font-serif:
     'Noto Serif KR',
     'Nanum Myeongjo',

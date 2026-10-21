@@ -6,7 +6,7 @@ import { speechBubbleStyle } from './style';
 import type { DefaultComponentPropsInternal } from '@montage-ui/engine';
 import type { SpeechBubbleProps } from './types';
 
-/** 캐릭터가 하는 짧은 말. 명조로 적어 사주 화면의 목소리를 낸다. */
+/** 캐릭터가 하는 짧은 말. 대화 답과 같은 --font-voice 로 적어 한 목소리를 낸다. */
 const SpeechBubble = forwardRef<
   HTMLParagraphElement,
   DefaultComponentPropsInternal<SpeechBubbleProps, 'p'>

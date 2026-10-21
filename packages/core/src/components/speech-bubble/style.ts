@@ -25,10 +25,10 @@ export const speechBubbleStyle =
       border: 1px solid ${border};
       background-color: ${bg};
       color: ${fg};
-      font-family: var(--font-serif);
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 1.45;
+      font-family: var(--font-voice);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
       text-align: center;
       box-shadow: ${theme.semantic.elevation.shadow.normal.xsmall};
 

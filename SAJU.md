@@ -7,7 +7,7 @@
 1. **엔진의 숫자를 그대로 그린다.** 사주 부품은 값을 계산하지 않는다. 명식·오행·점수는 사주 엔진이 준 값을 받아 보여 주기만 한다.
 2. **한지 위의 먹.** 바탕은 한지, 글자는 먹, 브랜드는 쪽빛, 강조는 단청 붉은빛이다. 차갑고 푸른 원본 무채색(coolNeutral)을 따뜻한 먹(ink)으로 바꿨다.
 3. **오행은 늘 같은 색.** 목·화·토·금·수는 화면 어디서나 같은 다섯 색(`semantic.ohaeng.*`)으로만 표현한다.
-4. **읽는 글은 고딕, 상징은 명조.** 본문은 Pretendard(`--font-sans`), 간지 글자·제목·캐릭터의 말은 명조(`--font-serif`)다.
+4. **한 역할 한 글꼴.** UI 는 Pretendard(`--font-sans`), 캐릭터의 말은 어디서든 본문용 명조(`--font-voice`), 간지 한자·제목·점수 같은 사주 상징은 명조(`--font-serif`)다. 같은 화자가 두 글꼴로 말하지 않는다.
 5. **원본과 합칠 수 있게.** 의미 토큰의 이름과 모양은 원본과 같고 값만 바꿨다. 새 토큰은 추가만 한다.
 
 ## 토큰
@@ -41,10 +41,11 @@ CSS 변수 이름은 원본 규칙을 따른다. 예: `--semantic-ohaeng-wood-pr
 
 | 변수 | 값 | 쓰임 |
 |:---|:---|:---|
-| `--font-sans` | Pretendard 계열(원본과 같은 스택) | 본문·입력·버튼 |
-| `--font-serif` | Noto Serif KR → 나눔명조 → AppleMyungjo → 바탕 | 간지 글자, 카드 제목, 말풍선, 점수 숫자 |
+| `--font-sans` | Pretendard 계열(원본과 같은 스택) | UI: 버튼·입력·라벨·사용자가 쓴 글 |
+| `--font-voice` | 고운바탕 → Noto Serif KR → 나눔명조 → AppleMyungjo → 바탕 | 캐릭터의 말: 말풍선과 대화 답(16px, 행간 1.5~1.75, 굵기 400) |
+| `--font-serif` | Noto Serif KR → 나눔명조 → AppleMyungjo → 바탕 | 사주 상징: 간지 한자, 카드 제목, 점수 숫자 |
 
-글꼴 파일은 포함하지 않는다. 앱이 Pretendard 와 Noto Serif KR 을 불러온다.
+글꼴 파일은 포함하지 않는다. 앱이 Pretendard, 고운바탕(Gowun Batang), Noto Serif KR 을 불러온다.
 
 ## 사주 부품
 
@@ -56,7 +57,7 @@ CSS 변수 이름은 원본 규칙을 따른다. 예: `--semantic-ohaeng-wood-pr
 | `ScoreRing` | 점수 원(일진 종합·궁합) | `.../score-ring` |
 | `FortuneFlow` | 날·달·해·대운 점수 흐름과 지금 위치 | `.../fortune-flow` |
 | `CompatibilityMeter` | 두 사람의 일간과 궁합 점수 | `.../compatibility-meter` |
-| `SpeechBubble` | 캐릭터의 말(명조) | `.../speech-bubble` |
+| `SpeechBubble` | 캐릭터의 말(`--font-voice`) | `.../speech-bubble` |
 
 모든 부품은 원본 관례(`Box` + `sx`, `index/types/style` 파일, 단위 테스트)를 따른다. 그 밖의 버튼·입력·모달·탭 등은 원본 Montage 부품을 그대로 쓰며, 토큰을 통해 자동으로 사주 색을 입는다.
 
