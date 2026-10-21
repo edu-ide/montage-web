@@ -276,7 +276,7 @@ const iconButtonColorStyle = (
         css`
           @supports (-webkit-backdrop-filter: none) {
             color: ${addOpacity(
-              theme.atomic.coolNeutral[50],
+              theme.atomic.ink[50],
               theme.opacity[61],
             )};
           }
@@ -308,7 +308,7 @@ const iconButtonColorStyle = (
           ${alternative
             ? css`
                 background-color: ${addOpacity(
-                  theme.atomic.coolNeutral[30],
+                  theme.atomic.ink[30],
                   theme.opacity[61],
                 )};
               `
@@ -348,7 +348,7 @@ const iconButtonColorStyle = (
         &:disabled,
         &[aria-disabled='true'] {
           background-color: transparent;
-          color: ${addOpacity(theme.atomic.coolNeutral[50], theme.opacity[22])};
+          color: ${addOpacity(theme.atomic.ink[50], theme.opacity[22])};
           border: none;
           box-shadow: none;
 

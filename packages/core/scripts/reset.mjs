@@ -141,9 +141,9 @@ body {
   min-height: 100dvh;
 }
 
-body ,textarea, input {
-  font-family:
-    'Pretendard Variable',
+:root {
+  /* 사주 테마: 본문은 Pretendard, 간지·제목·말풍선은 명조(var(--font-serif)) */
+  --font-sans: 'Pretendard Variable',
     'Pretendard JP Variable',
     Pretendard,
     'Pretendard JP',
@@ -160,6 +160,16 @@ body ,textarea, input {
     'Segoe UI Emoji',
     'Segoe UI Symbol',
     sans-serif;
+  --font-serif:
+    'Noto Serif KR',
+    'Nanum Myeongjo',
+    AppleMyungjo,
+    'Batang',
+    serif;
+}
+
+body ,textarea, input {
+  font-family: var(--font-sans);
 }
 
 html:lang(ja) body,

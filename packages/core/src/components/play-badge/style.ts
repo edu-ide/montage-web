@@ -19,14 +19,14 @@ export const playBadgeStyle =
     ${alternative
       ? css`
           background-color: ${addOpacity(
-            theme.atomic.coolNeutral[30],
+            theme.atomic.ink[30],
             theme.opacity[61],
           )};
         `
       : css`
           backdrop-filter: blur(32px);
           background-color: ${addOpacity(
-            theme.atomic.coolNeutral[40],
+            theme.atomic.ink[40],
             theme.opacity[28],
           )};
         `}

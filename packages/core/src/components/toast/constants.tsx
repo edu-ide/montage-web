@@ -52,7 +52,7 @@ export const toastIconComponent: {
       <IconCircleCloseFill
         aria-label="negative"
         sx={(theme) => ({
-          color: theme.atomic.red[60],
+          color: theme.atomic.dancheong[60],
         })}
       />
     </FlexBox>

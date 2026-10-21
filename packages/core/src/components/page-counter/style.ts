@@ -35,7 +35,7 @@ export const pageCounterStyle =
       ${alternative
         ? css`
             background-color: ${addOpacity(
-              theme.atomic.coolNeutral[30],
+              theme.atomic.ink[30],
               theme.opacity[61],
             )};
           `
